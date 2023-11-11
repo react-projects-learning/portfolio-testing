@@ -18,3 +18,17 @@
   console.log(Div({ color: "red" }));
 
 ```
+
+### Routing
+
+- we are using nesting here for "/work" route
+
+```
+  <Route path="/work">
+    <Route index element={<Work />}>
+    <Route path=":id" element={<MovieDetail />}>
+  </Route>
+```
+
+- then in MovieDetail component to access the `id param`
+- we will be using `useParam` hook from `react-router-dom` => `const {id} = useParam()`
